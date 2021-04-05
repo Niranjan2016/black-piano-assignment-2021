@@ -12,6 +12,11 @@
     cursor          : pointer;
 }
 
+.Button:disabled {
+    background-color: #41444b;
+    cursor          : not-allowed;
+}
+
 .Button a:hover {
     background-color: transparent;
     color           : #4883ff;

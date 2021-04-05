@@ -3,7 +3,10 @@ import React, { Component } from "react";
 import Aux from "../../hoc/Aux/Aux";
 import Button from "../../Components/UI/Button/Button";
 import MovieListing from "../../Components/MovieList/MovieListing";
+import Spinner from "../../Components/UI/Spinner/Spinner";
 
+const api_key = process.env.REACT_APP_SECRET_CODE;
+const base_url = process.env.REACT_APP_API_BASE_URL;
 class MovieList extends Component {
   state = {
     movieList: [],
@@ -11,10 +14,30 @@ class MovieList extends Component {
   };
 
   fetchMoviesListHandler = () => {
-    console.log("Clicked on fetch Movies");
+    this.setState({ isFetchingData: true });
+    fetch(base_url + "all.json?api-key=" + api_key)
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            movieList: result.results,
+            isFetchingData: false,
+          });
+        },
+        (error) => {
+          this.setState({
+            isFetchingData: false,
+            error,
+          });
+        }
+      );
   };
 
   render() {
+    let listingJSX = <Spinner />;
+    if (!this.state.isFetchingData) {
+      listingJSX = <MovieListing></MovieListing>;
+    }
     return (
       <Aux>
         <p>
@@ -23,11 +46,15 @@ class MovieList extends Component {
           Movies"
         </p>
         <div style={{ textAlign: "center" }}>
-          <Button btnType="Success" clicked={this.fetchMoviesListHandler}>
+          <Button
+            btnType="Success"
+            clicked={this.fetchMoviesListHandler}
+            disabled={this.state.isFetchingData}
+          >
             Fetch Movies
           </Button>
         </div>
-        <MovieListing></MovieListing>
+        {listingJSX}
       </Aux>
     );
   }
