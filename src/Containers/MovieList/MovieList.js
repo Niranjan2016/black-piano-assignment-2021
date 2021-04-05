@@ -36,7 +36,9 @@ class MovieList extends Component {
   render() {
     let listingJSX = <Spinner />;
     if (!this.state.isFetchingData) {
-      listingJSX = <MovieListing></MovieListing>;
+      listingJSX = (
+        <MovieListing moviesData={this.state.movieList}></MovieListing>
+      );
     }
     return (
       <Aux>

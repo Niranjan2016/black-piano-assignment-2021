@@ -3,6 +3,7 @@
     border    : 1px solid #ccc;
     height    : 650px;
     margin-top: 10px;
+    overflow-y: auto;
 }
 
 .header-row {
@@ -15,4 +16,9 @@
 .data-row {
     height    : 150px;
     text-align: left;
+}
+
+.no-data {
+    margin    : auto 0;
+    text-align: center;
 }
