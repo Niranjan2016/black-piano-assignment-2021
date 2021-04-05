@@ -1,0 +1,18 @@
+.listing-container {
+    width     : 100%;
+    border    : 1px solid #ccc;
+    height    : 650px;
+    margin-top: 10px;
+}
+
+.header-row {
+    background-color: #dcdcdc;
+    height          : 50px;
+    color           : black;
+    margin          : 0 auto;
+}
+
+.data-row {
+    height    : 150px;
+    text-align: left;
+}

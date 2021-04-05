@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import classes from "./MovieList.module.css";
 import Aux from "../../hoc/Aux/Aux";
 import Button from "../../Components/UI/Button/Button";
+import MovieListing from "../../Components/MovieList/MovieListing";
 
 class MovieList extends Component {
   state = {
@@ -26,6 +27,7 @@ class MovieList extends Component {
             Fetch Movies
           </Button>
         </div>
+        <MovieListing></MovieListing>
       </Aux>
     );
   }

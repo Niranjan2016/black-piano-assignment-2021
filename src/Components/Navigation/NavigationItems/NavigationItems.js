@@ -4,7 +4,7 @@ import NavigationItem from "./NavigationItem/NavigationItem";
 
 const navigationItems = (props) => (
   <ul className={classes.NavigationItems}>
-    <NavigationItem link="/" active>
+    <NavigationItem link="/" exact>
       Movies List
     </NavigationItem>
     <NavigationItem link="/search">Search Movie </NavigationItem>

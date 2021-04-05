@@ -1,0 +1,40 @@
+.header-column {
+    border    : 1px solid #000;
+    height    : inherit;
+    width     : 250px;
+    text-align: center;
+    float     : left;
+}
+
+.data-column {
+    border    : 1px solid #000;
+    height    : inherit;
+    width     : 250px;
+    text-align: center;
+    float     : left;
+}
+
+.serial-no {
+    width: 50px;
+}
+
+.movie-name {
+    width: 336px
+}
+
+.small {
+    width: 100px
+}
+
+.extra-large {
+    width: 573px;
+}
+
+img {
+    height: 100px;
+    width : 225px;
+}
+
+span {
+    font-weight: bold;
+}
