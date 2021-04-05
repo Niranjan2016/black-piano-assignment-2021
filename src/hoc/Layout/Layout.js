@@ -5,28 +5,14 @@ import classes from "./Layout.module.css";
 import Toolbar from "../../Components/Navigation/Toolbar/Toolbar";
 // import SideDrawer from "../../components/Navigation/SideDrawer/SideDrawer";
 
+const env_type = process.env.REACT_APP_HOST_ENV;
+const api_key = process.env.REACT_APP_SECRET_CODE;
 class Layout extends Component {
-  state = {
-    showSideDrawer: false,
-  };
-  sideDrawerClosedHandler = () => {
-    this.setState({ showSideDrawer: false });
-  };
-
-  sideDrawerToggleHandler = () => {
-    this.setState((prevState) => {
-      return { showSideDrawer: !prevState.showSideDrawer };
-    });
-  };
-
   render() {
+    console.log(env_type, api_key);
     return (
       <Aux>
-        <Toolbar drawerToggleClicked={this.sideDrawerToggleHandler} />
-        {/* <SideDrawer
-          open={this.state.showSideDrawer}
-          closed={this.sideDrawerClosedHandler}
-        /> */}
+        <Toolbar />
         <main className={classes.Content}>{this.props.children}</main>
       </Aux>
     );
