@@ -1,0 +1,28 @@
+.Button {
+    display         : inline-block;
+    background-color: #4883ff;
+    color           : #fff;
+    font-size       : 15px;
+    font-weight     : 500;
+    padding         : 10px 16px;
+    text-decoration : none;
+    border          : 2px solid #4883ff;
+    transition      : all 0.5s;
+    border-radius   : 8px;
+    cursor          : pointer;
+}
+
+.Button a:hover {
+    background-color: transparent;
+    color           : #4883ff;
+}
+
+
+.Success {
+    color      : #ffffff;
+    font-weight: bold;
+}
+
+.Danger {
+    color: #944317;
+}
