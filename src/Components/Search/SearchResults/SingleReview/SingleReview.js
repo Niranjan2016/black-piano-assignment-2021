@@ -2,8 +2,7 @@ import React from "react";
 import classes from "./SingleReview.module.css";
 import Aux from "../../../../hoc/Aux/Aux";
 
-const SingleReview = (props) => {
-  console.log(props);
+const SingleReview = (props) => { 
   let data = props.movieData;
   return (
     <Aux>
@@ -26,7 +25,12 @@ const SingleReview = (props) => {
         {data.link && data.link.url ? (
           <div className={classes.summary}>
             Read Full Review :{" "}
-            <a href={data.link.url} alt="review link" target="_blank">
+            <a
+              href={data.link.url}
+              rel="noreferrer"
+              alt="review link"
+              target="_blank"
+            >
               Click Here
             </a>
           </div>

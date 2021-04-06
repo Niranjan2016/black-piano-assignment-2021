@@ -13,13 +13,13 @@ const search = (props) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [isDataLoading, setIsDataLoadingState] = useState(false);
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [openingdate, setOpeningdateState] = useState(new Date());
+  const [openingdate, setOpeningdateState] = useState(null);
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [openingdate1, setOpeningdate1State] = useState(new Date());
+  const [openingdate1, setOpeningdate1State] = useState(null);
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [publicationdate, setPublicationdateState] = useState(new Date());
+  const [publicationdate, setPublicationdateState] = useState(null);
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [publicationdate1, setPublicationdate1State] = useState(new Date());
+  const [publicationdate1, setPublicationdate1State] = useState(null);
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [searchquery, setSearchQueryState] = useState(null);
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -37,13 +37,68 @@ const search = (props) => {
     if (reviewby) {
       params = params + "&reviewer=" + reviewby.trim();
     }
+    if (openingdate && openingdate1) {
+      let d = new Date(openingdate);
+      let ye = new Intl.DateTimeFormat("en", { year: "numeric" }).format(d);
+      let mo = new Intl.DateTimeFormat("en", { month: "2-digit" }).format(d);
+      let da = new Intl.DateTimeFormat("en", { day: "2-digit" }).format(d);
+      let d1 = new Date(openingdate1);
+      let ye1 = new Intl.DateTimeFormat("en", { year: "numeric" }).format(d1);
+      let mo1 = new Intl.DateTimeFormat("en", { month: "2-digit" }).format(d1);
+      let da1 = new Intl.DateTimeFormat("en", { day: "2-digit" }).format(d1);
+      params =
+        params +
+        "&opening-date=" +
+        ye +
+        "-" +
+        mo +
+        "-" +
+        da +
+        ":" +
+        ye1 +
+        "-" +
+        mo1 +
+        "-" +
+        da1;
+    }
+    if (publicationdate && publicationdate1) {
+      let d = new Date(publicationdate);
+      let ye = new Intl.DateTimeFormat("en", { year: "numeric" }).format(d);
+      let mo = new Intl.DateTimeFormat("en", { month: "2-digit" }).format(d);
+      let da = new Intl.DateTimeFormat("en", { day: "2-digit" }).format(d);
+      let d1 = new Date(publicationdate1);
+      let ye1 = new Intl.DateTimeFormat("en", { year: "numeric" }).format(d1);
+      let mo1 = new Intl.DateTimeFormat("en", { month: "2-digit" }).format(d1);
+      let da1 = new Intl.DateTimeFormat("en", { day: "2-digit" }).format(d1);
+      params =
+        params +
+        "&publication-date=" +
+        ye +
+        "-" +
+        mo +
+        "-" +
+        da +
+        ":" +
+        ye1 +
+        "-" +
+        mo1 +
+        "-" +
+        da1;
+    }
     fetch(base_url + "search.json?" + params)
       .then((res) => res.json())
       .then(
         (result) => {
-          console.log(result.results);
-          setMoviesListState([...result.results]);
-          setIsDataLoadingState(false);
+          if (result) {
+            setMoviesListState([...result.results]);
+            setIsDataLoadingState(false);
+            setOpeningdateState(null);
+            setOpeningdate1State(null);
+            setPublicationdateState(null);
+            setPublicationdate1State(null);
+            setSearchQueryState(null);
+            setReviewByState(null);
+          }
         },
         (error) => {
           //   this.setState({
@@ -65,6 +120,7 @@ const search = (props) => {
           <input
             type="text"
             name="searchQuery"
+            value={searchquery}
             onChange={(event) => setSearchQueryState(event.target.value)}
           />
         </div>
@@ -91,6 +147,7 @@ const search = (props) => {
           <input
             type="text"
             name="reviewby"
+            value={reviewby}
             onChange={(event) => setReviewByState(event.target.value)}
           />
         </div>
