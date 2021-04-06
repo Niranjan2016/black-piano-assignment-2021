@@ -4,6 +4,7 @@ Black Piano Assignment 2021 for frontend developer (ReacctJS)
 
 # Packages Used
 
+react : "^17.0.2"
 dotenv : To make provision to add .env file to store the api_key
 react-router : To make provision of routes in the application
 react-router-dom : To make provision of routes in the application
@@ -18,11 +19,13 @@ react-datepicker: To make provision for date selection in search criteria
 # API used
 
 Following New York Time Movies review API has been used to build this project
+
 NYT API - https://developer.nytimes.com/
 
 Please do create a account on NYT API and procure an API Key which is required to run this project.
 
 Once you have the API Key do create an .env file in root folder and add the following items to .env file
+
 REACT_APP_SECRET_CODE=<Your NYT API Key>
 REACT_APP_API_BASE_URL=https://api.nytimes.com/svc/movies/v2/reviews/
 
