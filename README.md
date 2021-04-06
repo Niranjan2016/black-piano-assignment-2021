@@ -45,7 +45,8 @@ This application has two main parts
 1. Listing movies from NYT Movies reviews list.
 2. Search specific movie(s) based on search criterias
 
-3. Listing movies from NYT Movies reviews list.
+## Listing movies from NYT Movies reviews list.
+
    In this section I have provided a button which will pull the first 20 movie reviews and load them in the table below. Here we can use pagination to check next list of movies.
    The table will hold the following information about the movies listed.
    a. Name & Movie poster
@@ -54,8 +55,10 @@ This application has two main parts
    d. MPAA Rating (if available)
    e. Critics Pick
    f. Review Link (This will open the original NYT movie review page once clicked )
+   
+   
+## Search specific movie(s) based on search criterias
 
-4. Search specific movie(s) based on search criterias
    In this page there is provision made to search a movie from the reviewed movies list based on following criterias
    a. Search Text : this will search the entered text in movie name, review text, and review summary
    b. Publication Date : this is a range of dates based on which it will search the movies having the publication date falling in between the selected dates.
