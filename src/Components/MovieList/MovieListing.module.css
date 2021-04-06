@@ -5,6 +5,21 @@
     margin-top: 10px;
     overflow-y: auto;
 }
+ 
+
+.listing-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.listing-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius     : 10px;
+}
+
+.listing-container::-webkit-scrollbar-thumb {
+    border-radius     : 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
 
 .header-row {
     background-color: #4982fc;

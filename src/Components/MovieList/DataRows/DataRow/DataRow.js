@@ -1,5 +1,4 @@
 import React from "react";
-// import classes from "./DataRow.module.css";
 import Aux from "../../../../hoc/Aux/Aux";
 import TableCell from "../../TableCell/TableCell";
 
