@@ -5,11 +5,17 @@ Black Piano Assignment 2021 for frontend developer (ReacctJS)
 # Packages Used
 
 react : "^17.0.2"
+
 dotenv : To make provision to add .env file to store the api_key
+
 react-router : To make provision of routes in the application
+
 react-router-dom : To make provision of routes in the application
+
 react-js-pagination : To make provision of pagination
+
 react-datepicker: To make provision for date selection in search criteria
+
 
 # Steps to run the project
 
