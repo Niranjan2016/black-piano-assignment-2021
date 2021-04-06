@@ -1,0 +1,55 @@
+.filter {
+    width        : 100%;
+    border       : 1px solid #dcdcdc;
+    border-radius: 10px;
+    height       : 175px;
+    padding      : 20px;
+}
+
+.label {
+    width            : 24%;
+    float            : left;
+    /* border        : 1px solid #dcdcdc; */
+    height           : 30px;
+    margin           : 0 auto;
+    vertical-align   : middle;
+}
+
+.separator {
+    width            : 2%;
+    float            : left;
+    height           : 30px;
+    margin           : 0 auto;
+    vertical-align   : middle;
+    /* border        : 1px solid #dcdcdc; */
+}
+
+.inputItem {
+    width            : 24%;
+    float            : left;
+    /* border        : 1px solid #dcdcdc; */
+    height           : 30px;
+    margin           : 0 auto;
+    vertical-align   : middle;
+}
+
+.dateRange {
+    width            : 24%;
+    float            : left;
+    /* border        : 1px solid #dcdcdc; */
+    height           : 30px;
+    margin           : 0 auto;
+    vertical-align   : middle;
+}
+
+.dateRange input {
+    width       : 90px;
+    margin-right: 20px;
+}
+
+.btnDiv {
+    width      : 100%;
+    text-align : center;
+    padding-top: 30px;
+    margin-top : 60px;
+}

@@ -24,6 +24,15 @@ const dataRow = (props) => {
               year: "numeric",
               month: "long",
               day: "2-digit",
+            }).format(new Date(props.dataItem.publication_date))
+          : "NA"}
+      </TableCell>
+      <TableCell extraClass="normal" isDataCell={true}>
+        {props.dataItem.opening_date
+          ? new Intl.DateTimeFormat("en-GB", {
+              year: "numeric",
+              month: "long",
+              day: "2-digit",
             }).format(new Date(props.dataItem.opening_date))
           : "NA"}
       </TableCell>
@@ -32,6 +41,9 @@ const dataRow = (props) => {
       </TableCell>
       <TableCell extraClass="small" isDataCell={true}>
         {props.dataItem.critics_pick === 1 ? "Yes" : "No"}
+      </TableCell>
+      <TableCell extraClass="normal" isDataCell={true}>
+        {props.dataItem.byline ? props.dataItem.byline : "NA"}
       </TableCell>
       <TableCell extraClass="medium" isDataCell={true}>
         <a target="_blank" rel="noreferrer" href={props.dataItem.link.url}>

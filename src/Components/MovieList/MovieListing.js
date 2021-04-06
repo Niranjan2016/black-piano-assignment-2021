@@ -24,9 +24,11 @@ const movieListing = (props) => {
         <div className={classes["header-row"]}>
           <TableCell extraClass="serial-no">#</TableCell>
           <TableCell extraClass="extra-large">Movie Name</TableCell>
+          <TableCell extraClass="normal">Publication Date</TableCell>
           <TableCell extraClass="normal">Opening Date</TableCell>
           <TableCell extraClass="small">MPAA Rating</TableCell>
           <TableCell extraClass="small">Critics Pick?</TableCell>
+          <TableCell extraClass="normal">Review By</TableCell>
           <TableCell extraClass="medium">Review Link</TableCell>
         </div>
         <div className={classes["data-row"]}>{dataRowsJSX}</div>
