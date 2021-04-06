@@ -10,7 +10,7 @@ react-router-dom : To make provision of routes in the application
 react-js-pagination : To make provision of pagination
 react-datepicker: To make provision for date selection in search criteria
 
-# Step to run the project
+# Steps to run the project
 
 1. git clone https://github.com/Niranjan2016/black-piano-assignment-2021.git
 2. cd black-piano-assignment-2021/
