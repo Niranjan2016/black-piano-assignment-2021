@@ -7,9 +7,9 @@ import Spinner from "../../UI/Spinner/Spinner";
 
 const SearchResults = (props) => {
   let searchResultJSX = null;
-  if (props.moviesList.length >= 2) {
+  if (props.moviesList && props.moviesList.length >= 2) {
     searchResultJSX = <ReviewsList movieData={props.moviesList}></ReviewsList>;
-  } else if (props.moviesList.length === 1) {
+  } else if (props.moviesList && props.moviesList.length === 1) {
     searchResultJSX = (
       <SingleReview movieData={props.moviesList[0]}></SingleReview>
     );

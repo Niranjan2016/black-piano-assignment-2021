@@ -29,6 +29,13 @@ const search = (props) => {
 
   const searchClickedHandler = () => {
     setIsDataLoadingState(true);
+    setOpeningdateState(null);
+    setOpeningdate1State(null);
+    setPublicationdateState(null);
+    setPublicationdate1State(null);
+    setSearchQueryState(null);
+    setReviewByState(null);
+    setMoviesListState(null);
     let params = "api-key=" + api_key;
     params = params + "&order=by-opening-date";
     if (searchquery) {
@@ -89,16 +96,16 @@ const search = (props) => {
       .then((res) => res.json())
       .then(
         (result) => {
-          if (result) {
+          if (result.results !== null) {
             setMoviesListState([...result.results]);
-            setIsDataLoadingState(false);
-            setOpeningdateState(null);
-            setOpeningdate1State(null);
-            setPublicationdateState(null);
-            setPublicationdate1State(null);
-            setSearchQueryState(null);
-            setReviewByState(null);
           }
+          setIsDataLoadingState(false);
+          setOpeningdateState(null);
+          setOpeningdate1State(null);
+          setPublicationdateState(null);
+          setPublicationdate1State(null);
+          setSearchQueryState(null);
+          setReviewByState(null);
         },
         (error) => {
           //   this.setState({
@@ -120,8 +127,9 @@ const search = (props) => {
           <input
             type="text"
             name="searchQuery"
-            value={searchquery}
-            onChange={(event) => setSearchQueryState(event.target.value)}
+            onChange={(event) => {
+              setSearchQueryState(event.target.value);
+            }}
           />
         </div>
 
