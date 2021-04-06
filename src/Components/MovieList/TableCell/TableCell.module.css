@@ -15,19 +15,23 @@
 }
 
 .serial-no {
-    width: 50px;
+    width: 3%;
 }
 
-.movie-name {
-    width: 320px
+.medium {
+    width: 30%;
+}
+
+.normal {
+    width: 10%;
 }
 
 .small {
-    width: 100px
+    width: 5%;
 }
 
 .extra-large {
-    width: 573px;
+    width: 47%;
 }
 
 img {

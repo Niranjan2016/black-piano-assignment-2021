@@ -1,7 +1,7 @@
 .listing-container {
     width     : 100%;
     border    : 1px solid #ccc;
-    height    : 650px;
+    height    : 600px;
     margin-top: 10px;
     overflow-y: auto;
 }
@@ -16,6 +16,7 @@
 .data-row {
     height    : 150px;
     text-align: left;
+    float     : left;
 }
 
 .no-data {

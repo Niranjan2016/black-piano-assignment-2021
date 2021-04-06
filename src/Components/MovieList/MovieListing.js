@@ -13,7 +13,7 @@ const movieListing = (props) => {
     </div>
   );
 
-  if (props.moviesData.length >= 1) {
+  if (props.moviesData && props.moviesData.length >= 1) {
     dataRows = props.moviesData;
     dataRowsJSX = <DataRows data={dataRows}></DataRows>;
   }
@@ -24,10 +24,10 @@ const movieListing = (props) => {
         <div className={classes["header-row"]}>
           <TableCell extraClass="serial-no">#</TableCell>
           <TableCell extraClass="extra-large">Movie Name</TableCell>
-          <TableCell extraClass="small">Opening Date</TableCell>
+          <TableCell extraClass="normal">Opening Date</TableCell>
           <TableCell extraClass="small">MPAA Rating</TableCell>
           <TableCell extraClass="small">Critics Pick?</TableCell>
-          <TableCell extraClass="movie-name">Review Link</TableCell>
+          <TableCell extraClass="medium">Review Link</TableCell>
         </div>
         <div className={classes["data-row"]}>{dataRowsJSX}</div>
       </div>

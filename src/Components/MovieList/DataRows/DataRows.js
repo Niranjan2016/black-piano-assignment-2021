@@ -1,6 +1,4 @@
 import React from "react";
-// import classes from './DataRows.module.css';
-// import TableCell from "../TableCell/TableCell";
 import DataRow from "./DataRow/DataRow";
 
 const dataRows = (props) => {

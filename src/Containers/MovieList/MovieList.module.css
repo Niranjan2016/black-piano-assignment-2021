@@ -1,0 +1,28 @@
+.pagination {
+    width: 100%;
+}
+
+.pagination ul {
+    list-style: none;
+}
+
+.pagination li {
+    float           : left;
+    margin-left     : 10px;
+    border          : 1px solid #ccc;
+    color           : white;
+    width           : 50px;
+    text-align      : center;
+    font-weight     : bold;
+    background-color: #4982fc;
+}
+
+.pagination li a {
+    text-decoration: none;
+    color          : white !important;
+}
+
+.pagination li.active {
+    background-color: #4982fc;
+    color           : white !important;
+}
